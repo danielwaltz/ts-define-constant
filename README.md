@@ -32,6 +32,8 @@ const {
   values, // An array of the values of the constants
   getKey, // A function that returns the key of a given value
   getValue, // A function that returns the value of a given key
+  isKey, // A function that returns true if the given value is a key of the constants
+  isValue, // A function that returns true if the given value is a value of the constants
   isUser, // A function that returns true if the given value is equal to the USER constant
   isAdmin, // A function that returns true if the given value is equal to the ADMIN constant
 } = defineConstant({ USER: 'USER', ADMIN: 'ADMIN' } as const);
@@ -49,6 +51,8 @@ export const {
   values: USER_ROLE_VALUES,
   getKey: getUserRoleKey,
   getValue: getUserRoleValue,
+  isKey: isUserRoleKey,
+  isValue: isUserRoleValue,
   isUser,
   isAdmin,
 } = defineConstant({ USER: 'USER', ADMIN: 'ADMIN' } as const);
@@ -59,6 +63,8 @@ export const {
   values: SORT_ORDER_VALUES,
   getKey: getSortOrderKey,
   getValue: getSortOrderValue,
+  isKey: isSortOrderKey,
+  isValue: isSortOrderValue,
   isAsc,
   isDesc,
 } = defineConstant({ ASC: 'ASC', DESC: 'DESC' } as const);

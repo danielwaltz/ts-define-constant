@@ -59,13 +59,36 @@ describe('defineConstant', () => {
     expect(getKey('USER_VALUE')).toStrictEqual('USER_KEY');
   });
 
-  it('accurately checks if value is constant', () => {
-    const { isAdminKey } = defineConstant({
+  it('accurately checks if key is constant', () => {
+    const { isKey } = defineConstant({
       USER_KEY: 'USER_VALUE',
       ADMIN_KEY: 'ADMIN_VALUE',
     } as const);
 
-    expect(isAdminKey('USER_VALUE')).toBe(false);
+    expect(isKey('USER_KEY')).toBe(true);
+    expect(isKey('ADMIN_KEY')).toBe(true);
+    expect(isKey('ADMIN_VALUE')).toBe(false);
+  });
+
+  it('accurately checks if value is constant', () => {
+    const { isValue } = defineConstant({
+      USER_KEY: 'USER_VALUE',
+      ADMIN_KEY: 'ADMIN_VALUE',
+    } as const);
+
+    expect(isValue('USER_VALUE')).toBe(true);
+    expect(isValue('ADMIN_VALUE')).toBe(true);
+    expect(isValue('ADMIN_KEY')).toBe(false);
+  });
+
+  it('accurately checks if value is specific constant', () => {
+    const { isUserKey, isAdminKey } = defineConstant({
+      USER_KEY: 'USER_VALUE',
+      ADMIN_KEY: 'ADMIN_VALUE',
+    } as const);
+
+    expect(isUserKey('USER_VALUE')).toBe(true);
     expect(isAdminKey('ADMIN_VALUE')).toBe(true);
+    expect(isAdminKey('USER_VALUE')).toBe(false);
   });
 });

@@ -83,6 +83,14 @@ export function defineConstant<Value extends BaseValue>(value: Value) {
     getValue<TKey extends ValueKey>(key: TKey) {
       return object[key];
     },
+    isKey(key: unknown): key is ValueKey {
+      if (typeof key !== 'string') return false;
+      return keys.includes(key);
+    },
+    isValue(value: unknown): value is ValueItem {
+      if (typeof value !== 'string') return false;
+      return values.includes(value as ValueItem);
+    },
     ...narrowerFunctions,
   });
 }
