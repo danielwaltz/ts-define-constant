@@ -1,6 +1,6 @@
 # TS Define Constant
 
-Type safe utility for defining static constants with additional helper functions.
+Type safe utility for defining static constants with automatic type narrowing and additional helper functions.
 
 ## Install Plugin
 
