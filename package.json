@@ -1,11 +1,11 @@
 {
-  "name": "define-constant",
+  "name": "ts-define-constant",
   "version": "1.0.0",
   "license": "MIT",
   "author": "Daniel Waltz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danielwaltz/define-constant.git"
+    "url": "https://github.com/danielwaltz/ts-define-constant.git"
   },
   "keywords": [
     "utility"

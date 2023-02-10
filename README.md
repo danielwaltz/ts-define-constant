@@ -1,4 +1,4 @@
-# Define Constant
+# TS Define Constant
 
 Type safe utility for defining static constants with additional helper functions.
 
@@ -6,13 +6,13 @@ Type safe utility for defining static constants with additional helper functions
 
 ```bash
 # npm
-npm i -D define-constant
+npm i -D ts-define-constant
 
 # yarn
-yarn add -D define-constant
+yarn add -D ts-define-constant
 
 # pnpm
-pnpm i -D define-constant
+pnpm i -D ts-define-constant
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ Supports passing in a plain object or an array of strings as the first argument.
 > :warning: The `defineConstant` function requires a type assertion on the passed in value using `as const` to work properly!
 
 ```ts
-import { defineConstant } from 'define-constant';
+import { defineConstant } from 'ts-define-constant';
 
 const {
   object, // The plain object containing the constants
@@ -41,7 +41,7 @@ An example of what this looks like when multiple constants are defined and expor
 
 ```ts
 // constants.ts
-import { defineConstant } from 'define-constant';
+import { defineConstant } from 'ts-define-constant';
 
 export const {
   object: USER_ROLES,
