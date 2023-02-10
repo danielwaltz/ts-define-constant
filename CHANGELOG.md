@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/danielwaltz/ts-define-constant/compare/v1.0.0...v1.1.0) (2023-02-10)
+
+
+### Features
+
+* add narrows for if value is any key or value ([2bace41](https://github.com/danielwaltz/ts-define-constant/commit/2bace41831e7ffed6052edc7fe884461ed9856b6))
+
 # 1.0.0 (2023-02-08)
 
 
