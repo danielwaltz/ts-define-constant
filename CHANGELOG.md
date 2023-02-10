@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/danielwaltz/ts-define-constant/compare/v1.1.0...v1.1.1) (2023-02-10)
+
+
+### Bug Fixes
+
+* remove dev dependency flag from install step ([f5bbdd9](https://github.com/danielwaltz/ts-define-constant/commit/f5bbdd9db9792d03172e51bb455bf804045b2515))
+
 # [1.1.0](https://github.com/danielwaltz/ts-define-constant/compare/v1.0.0...v1.1.0) (2023-02-10)
 
 
