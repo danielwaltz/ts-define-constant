@@ -2,17 +2,17 @@
 
 Type safe utility for defining static constants with automatic type narrowing and additional helper functions.
 
-## Install Plugin
+## Install
 
 ```bash
 # npm
-npm i -D ts-define-constant
+npm i ts-define-constant
 
 # yarn
-yarn add -D ts-define-constant
+yarn add ts-define-constant
 
 # pnpm
-pnpm i -D ts-define-constant
+pnpm i ts-define-constant
 ```
 
 ## Usage
