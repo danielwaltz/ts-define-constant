@@ -1,6 +1,7 @@
 {
   "name": "ts-define-constant",
   "version": "1.0.0",
+  "description": "Type safe utility for defining static constants with additional helper functions",
   "license": "MIT",
   "author": "Daniel Waltz",
   "repository": {
@@ -8,7 +9,9 @@
     "url": "https://github.com/danielwaltz/ts-define-constant.git"
   },
   "keywords": [
-    "utility"
+    "utility",
+    "typescript",
+    "constant"
   ],
   "type": "commonjs",
   "main": "dist/index.js",
