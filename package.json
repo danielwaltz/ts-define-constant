@@ -11,7 +11,9 @@
   "keywords": [
     "utility",
     "typescript",
-    "constant"
+    "constant",
+    "narrowing",
+    "type-narrowing"
   ],
   "type": "commonjs",
   "main": "dist/index.js",
