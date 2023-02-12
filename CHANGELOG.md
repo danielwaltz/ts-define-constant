@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/danielwaltz/ts-define-constant/compare/v1.1.2...v1.1.3) (2023-02-12)
+
+
+### Bug Fixes
+
+* swap export file extensions ([109750e](https://github.com/danielwaltz/ts-define-constant/commit/109750eb41e799a5a205047c80b3aa4bcf66bd10))
+
 ## [1.1.2](https://github.com/danielwaltz/ts-define-constant/compare/v1.1.1...v1.1.2) (2023-02-12)
 
 
