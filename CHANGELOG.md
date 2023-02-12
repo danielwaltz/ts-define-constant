@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/danielwaltz/ts-define-constant/compare/v1.1.1...v1.1.2) (2023-02-12)
+
+
+### Bug Fixes
+
+* fix module export ([9ea7794](https://github.com/danielwaltz/ts-define-constant/commit/9ea7794d61c321bc6282b01d243e68b69506e43d))
+
 ## [1.1.1](https://github.com/danielwaltz/ts-define-constant/compare/v1.1.0...v1.1.1) (2023-02-10)
 
 
