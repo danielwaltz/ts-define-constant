@@ -56,16 +56,15 @@ export function defineConstant<Value extends BaseValue>(value: Value) {
   const values = Object.values(object) as ValueObject[keyof ValueObject][];
   type ValueItem = (typeof values)[number];
 
-  type NarrowerKey = `is${PascalCase<ValueKey & string>}`;
-
+  type NarrowerKey<TKey extends ValueKey> = `is${PascalCase<TKey & string>}`;
   const narrowerFunctions = keys.reduce(
-    (result, key) => ({
-      ...result,
-      [`is${pascalCase(String(key))}`]: (value: ValueItem) =>
-        value === object[key],
-    }),
+    (result, key) => {
+      const narrowerKey = `is${pascalCase(String(key))}`;
+      const narrowerFunction = (value: unknown) => value === object[key];
+      return { ...result, [narrowerKey]: narrowerFunction };
+    },
     {} as {
-      [TKey in ValueKey as NarrowerKey]: (
+      [TKey in ValueKey as NarrowerKey<TKey>]: (
         value: unknown,
       ) => value is ValueObject[TKey];
     },

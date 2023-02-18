@@ -68,9 +68,7 @@ describe('defineConstant', () => {
       BAR_KEY: 'BAR_VALUE',
     } as const);
 
-    // @ts-expect-error should narrow to 'FOO_VALUE'
     expectTypeOf(isFooKey).guards.toEqualTypeOf<'FOO_VALUE'>();
-    // @ts-expect-error should narrow to 'BAR_VALUE'
     expectTypeOf(isBarKey).guards.toEqualTypeOf<'BAR_VALUE'>();
   });
 });
