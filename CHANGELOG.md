@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/danielwaltz/ts-define-constant/compare/v1.1.3...v1.2.0) (2023-02-18)
+
+
+### Bug Fixes
+
+* fix type narrowing in narrower functions ([de6aa91](https://github.com/danielwaltz/ts-define-constant/commit/de6aa912dbb984164efef27e681a85c625e3dfd0))
+
+
+### Features
+
+* support using numbers and symbols in constant ([c2ef71c](https://github.com/danielwaltz/ts-define-constant/commit/c2ef71cdbdf3f221cb81cb3d0449ffd37b32d630))
+* update pascal case util to support more cases ([3a07955](https://github.com/danielwaltz/ts-define-constant/commit/3a07955e3bd66f20cd5a9cb26ef25e699489769b))
+
 ## [1.1.3](https://github.com/danielwaltz/ts-define-constant/compare/v1.1.2...v1.1.3) (2023-02-12)
 
 
