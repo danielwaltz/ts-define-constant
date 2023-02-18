@@ -3,92 +3,92 @@ import { defineConstant } from '@/index';
 
 describe('defineConstant', () => {
   it('returns object using array value', () => {
-    const { object } = defineConstant(['USER', 'ADMIN'] as const);
+    const { object } = defineConstant(['FOO', 'BAR'] as const);
 
     expect(object).toStrictEqual({
-      USER: 'USER',
-      ADMIN: 'ADMIN',
+      FOO: 'FOO',
+      BAR: 'BAR',
     });
   });
 
   it('returns object using object value', () => {
     const { object } = defineConstant({
-      USER: 'USER',
-      ADMIN: 'ADMIN',
+      FOO: 'FOO',
+      BAR: 'BAR',
     } as const);
 
     expect(object).toStrictEqual({
-      USER: 'USER',
-      ADMIN: 'ADMIN',
+      FOO: 'FOO',
+      BAR: 'BAR',
     });
   });
 
   it('returns accurate constant keys', () => {
     const { keys } = defineConstant({
-      USER_KEY: 'USER_VALUE',
-      ADMIN_KEY: 'ADMIN_VALUE',
+      FOO_KEY: 'FOO_VALUE',
+      BAR_KEY: 'BAR_VALUE',
     } as const);
 
-    expect(keys).toStrictEqual(['USER_KEY', 'ADMIN_KEY']);
+    expect(keys).toStrictEqual(['FOO_KEY', 'BAR_KEY']);
   });
 
   it('returns accurate constant values', () => {
     const { values } = defineConstant({
-      USER_KEY: 'USER_VALUE',
-      ADMIN_KEY: 'ADMIN_VALUE',
+      FOO_KEY: 'FOO_VALUE',
+      BAR_KEY: 'BAR_VALUE',
     } as const);
 
-    expect(values).toStrictEqual(['USER_VALUE', 'ADMIN_VALUE']);
+    expect(values).toStrictEqual(['FOO_VALUE', 'BAR_VALUE']);
   });
 
   it('gets value using key', () => {
     const { getValue } = defineConstant({
-      USER_KEY: 'USER_VALUE',
-      ADMIN_KEY: 'ADMIN_VALUE',
+      FOO_KEY: 'FOO_VALUE',
+      BAR_KEY: 'BAR_VALUE',
     } as const);
 
-    expect(getValue('USER_KEY')).toStrictEqual('USER_VALUE');
+    expect(getValue('FOO_KEY')).toStrictEqual('FOO_VALUE');
   });
 
   it('gets key using value', () => {
     const { getKey } = defineConstant({
-      USER_KEY: 'USER_VALUE',
-      ADMIN_KEY: 'ADMIN_VALUE',
+      FOO_KEY: 'FOO_VALUE',
+      BAR_KEY: 'BAR_VALUE',
     } as const);
 
-    expect(getKey('USER_VALUE')).toStrictEqual('USER_KEY');
+    expect(getKey('FOO_VALUE')).toStrictEqual('FOO_KEY');
   });
 
   it('accurately checks if key is constant', () => {
     const { isKey } = defineConstant({
-      USER_KEY: 'USER_VALUE',
-      ADMIN_KEY: 'ADMIN_VALUE',
+      FOO_KEY: 'FOO_VALUE',
+      BAR_KEY: 'BAR_VALUE',
     } as const);
 
-    expect(isKey('USER_KEY')).toBe(true);
-    expect(isKey('ADMIN_KEY')).toBe(true);
-    expect(isKey('ADMIN_VALUE')).toBe(false);
+    expect(isKey('FOO_KEY')).toBe(true);
+    expect(isKey('BAR_KEY')).toBe(true);
+    expect(isKey('BAR_VALUE')).toBe(false);
   });
 
   it('accurately checks if value is constant', () => {
     const { isValue } = defineConstant({
-      USER_KEY: 'USER_VALUE',
-      ADMIN_KEY: 'ADMIN_VALUE',
+      FOO_KEY: 'FOO_VALUE',
+      BAR_KEY: 'BAR_VALUE',
     } as const);
 
-    expect(isValue('USER_VALUE')).toBe(true);
-    expect(isValue('ADMIN_VALUE')).toBe(true);
-    expect(isValue('ADMIN_KEY')).toBe(false);
+    expect(isValue('FOO_VALUE')).toBe(true);
+    expect(isValue('BAR_VALUE')).toBe(true);
+    expect(isValue('BAR_KEY')).toBe(false);
   });
 
   it('accurately checks if value is specific constant', () => {
-    const { isUserKey, isAdminKey } = defineConstant({
-      USER_KEY: 'USER_VALUE',
-      ADMIN_KEY: 'ADMIN_VALUE',
+    const { isFooKey, isBarKey } = defineConstant({
+      FOO_KEY: 'FOO_VALUE',
+      BAR_KEY: 'BAR_VALUE',
     } as const);
 
-    expect(isUserKey('USER_VALUE')).toBe(true);
-    expect(isAdminKey('ADMIN_VALUE')).toBe(true);
-    expect(isAdminKey('USER_VALUE')).toBe(false);
+    expect(isFooKey('FOO_VALUE')).toBe(true);
+    expect(isBarKey('BAR_VALUE')).toBe(true);
+    expect(isBarKey('FOO_VALUE')).toBe(false);
   });
 });
