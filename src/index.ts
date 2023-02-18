@@ -1,12 +1,12 @@
 import { pascalCase } from '@/utils/pascalCase';
 import type { PascalCase } from 'type-fest';
 
-type BaseArrayValue = ReadonlyArray<string>;
-type BaseObjectValue = Readonly<Record<string, string>>;
+type BaseArrayValue = ReadonlyArray<PropertyKey>;
+type BaseObjectValue = Readonly<Record<PropertyKey, PropertyKey>>;
 type BaseValue = BaseArrayValue | BaseObjectValue;
 
 type ArrayValueLiteral<Value extends BaseValue> = Value extends ReadonlyArray<
-  infer ArrayValue extends string
+  infer ArrayValue extends PropertyKey
 >
   ? Readonly<{ [Key in ArrayValue]: Key }>
   : never;

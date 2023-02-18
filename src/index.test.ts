@@ -23,6 +23,36 @@ describe('defineConstant', () => {
     });
   });
 
+  it('supports numbers and symbols as keys or values', () => {
+    const unique = Symbol();
+
+    const { object: OBJECT_VALUE } = defineConstant({
+      1: '2',
+      [unique]: 'BAR',
+      2: unique,
+    } as const);
+
+    const { object: ARRAY_VALUE } = defineConstant([
+      1,
+      '2',
+      unique,
+      'BAR',
+    ] as const);
+
+    expect(OBJECT_VALUE).toStrictEqual({
+      1: '2',
+      [unique]: 'BAR',
+      2: unique,
+    });
+
+    expect(ARRAY_VALUE).toStrictEqual({
+      1: 1,
+      ['2']: '2',
+      [unique]: unique,
+      BAR: 'BAR',
+    });
+  });
+
   it('returns accurate constant keys', () => {
     const { keys } = defineConstant({
       FOO_KEY: 'FOO_VALUE',
