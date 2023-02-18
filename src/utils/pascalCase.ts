@@ -1,6 +1,11 @@
 export function pascalCase(str: string) {
+  if (/^[\p{L}\d]+$/iu.test(str)) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
   return str
-    .split('_')
-    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
-    .join('');
+    .replace(
+      /([\p{L}\d])([\p{L}\d]*)/giu,
+      (_g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase(),
+    )
+    .replace(/[^\p{L}\d]/giu, '');
 }
