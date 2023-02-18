@@ -27,15 +27,24 @@ Supports passing in a plain object or an array of strings as the first argument.
 import { defineConstant } from 'ts-define-constant';
 
 const {
-  object, // The plain object containing the constants
-  keys, // An array of the keys of the constants
-  values, // An array of the values of the constants
-  getKey, // A function that returns the key of a given value
-  getValue, // A function that returns the value of a given key
-  isKey, // A function that returns true if the given value is a key of the constants
-  isValue, // A function that returns true if the given value is a value of the constants
-  isUser, // A function that returns true if the given value is equal to the USER constant
-  isAdmin, // A function that returns true if the given value is equal to the ADMIN constant
+  /* Plain object containing the constants */
+  object,
+  /* Array of the keys */
+  keys,
+  /* Array of the values */
+  values,
+  /* Function that returns the key of a given value */
+  getKey,
+  /* Function that returns the value of a given key */
+  getValue,
+  /* Function that returns true if the given value is a key of the constants */
+  isKey,
+  /* Function that returns true if the given value is a value of the constants */
+  isValue,
+  /* Function that returns true if the given value is equal to the USER constant */
+  isUser,
+  /* Function that returns true if the given value is equal to the ADMIN constant */
+  isAdmin,
 } = defineConstant({ USER: 'USER', ADMIN: 'ADMIN' } as const);
 ```
 
