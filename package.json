@@ -71,21 +71,21 @@
     "prepack": "npm run build"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^18.14.0",
-    "@typescript-eslint/eslint-plugin": "^5.52.0",
-    "@typescript-eslint/parser": "^5.52.0",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
+    "@types/node": "^18.16.18",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.4",
-    "semantic-release": "^20.1.0",
+    "prettier": "^2.8.8",
+    "semantic-release": "^21.0.5",
     "standard-version": "^9.5.0",
-    "tsup": "^6.6.3",
-    "type-fest": "^3.6.0",
-    "typescript": "^4.9.5",
-    "vitest": "^0.28.5"
+    "tsup": "^7.0.0",
+    "type-fest": "^3.12.0",
+    "typescript": "~5.0.4",
+    "vitest": "^0.32.2"
   }
 }
