@@ -1,3 +1,5 @@
+### [1.2.1](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.0...v1.2.1) (2023-06-17)
+
 # [1.2.0](https://github.com/danielwaltz/ts-define-constant/compare/v1.1.3...v1.2.0) (2023-02-18)
 
 
