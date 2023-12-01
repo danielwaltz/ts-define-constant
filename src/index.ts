@@ -1,4 +1,4 @@
-import { pascalCase } from '@/utils/pascalCase';
+import { pascalCase } from './utils/pascalCase';
 import type { PascalCase } from 'type-fest';
 
 type BaseArrayValue = ReadonlyArray<PropertyKey>;

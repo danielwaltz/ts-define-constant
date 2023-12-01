@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { defineConstant } from '@/index';
+import { defineConstant } from './index';
 
 describe('defineConstant', () => {
   it('returns object using array value', () => {

@@ -1,5 +1,5 @@
 import { describe, it, expectTypeOf } from 'vitest';
-import { defineConstant } from '@/index';
+import { defineConstant } from './index';
 
 describe('defineConstant', () => {
   it('properly types constant output', () => {

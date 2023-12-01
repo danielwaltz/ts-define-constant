@@ -1,5 +1,5 @@
 import { expect, describe, it } from 'vitest';
-import { pascalCase } from '@/utils/pascalCase';
+import { pascalCase } from '../utils/pascalCase';
 
 describe('pascalCase', () => {
   it('should convert strings to pascal case', () => {
