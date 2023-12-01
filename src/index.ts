@@ -18,8 +18,8 @@ type ObjectValueLiteral<Value extends BaseValue> = Value extends BaseObjectValue
 type ValueLiteral<Value extends BaseValue> = Value extends BaseArrayValue
   ? ArrayValueLiteral<Value>
   : Value extends BaseObjectValue
-  ? ObjectValueLiteral<Value>
-  : never;
+    ? ObjectValueLiteral<Value>
+    : never;
 
 function isArrayValue(value: BaseValue): value is BaseArrayValue {
   return Array.isArray(value);
