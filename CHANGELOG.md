@@ -1,3 +1,23 @@
+### [1.2.2](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.1...v1.2.2) (2023-12-02)
+
+
+### Styles
+
+* remove path alias usage ([4687f9f](https://github.com/danielwaltz/ts-define-constant/commit/4687f9fdd92583e65b9930f9e9daaeeaa4494609))
+
+
+### Continuous Integration
+
+* add publint and type correctness checking to ci ([a32c0fd](https://github.com/danielwaltz/ts-define-constant/commit/a32c0fdb5c755096b2c4abde1514fae9323d1e44))
+
+
+### Miscellaneous Chores
+
+* **deps:** update deps ([3f3d946](https://github.com/danielwaltz/ts-define-constant/commit/3f3d946efd1f3580db9fea5330da0f7be841f316))
+* update node to `v20.10.0` and use dedicated release config ([ddc3861](https://github.com/danielwaltz/ts-define-constant/commit/ddc38618b04552abfa0806fe665d070e3f716124))
+* update node to v18.16.1 ([b432a26](https://github.com/danielwaltz/ts-define-constant/commit/b432a26ea372951c9674c0d6bba532f157087dbe))
+* update node to v18.17.1 ([ec78bdd](https://github.com/danielwaltz/ts-define-constant/commit/ec78bdd6390ddde561046a123496d683f8127849))
+
 ### [1.2.1](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.0...v1.2.1) (2023-06-17)
 
 # [1.2.0](https://github.com/danielwaltz/ts-define-constant/compare/v1.1.3...v1.2.0) (2023-02-18)
