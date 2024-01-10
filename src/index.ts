@@ -5,20 +5,21 @@ type BaseArrayValue = ReadonlyArray<PropertyKey>;
 type BaseObjectValue = Readonly<Record<PropertyKey, PropertyKey>>;
 type BaseValue = BaseArrayValue | BaseObjectValue;
 
-type ArrayValueLiteral<Value extends BaseValue> = Value extends ReadonlyArray<
+type ArrayValueLiteral<TValue extends BaseValue> = TValue extends ReadonlyArray<
   infer ArrayValue extends PropertyKey
 >
   ? Readonly<{ [Key in ArrayValue]: Key }>
   : never;
 
-type ObjectValueLiteral<Value extends BaseValue> = Value extends BaseObjectValue
-  ? Readonly<{ [Key in keyof Value]: Value[Key] }>
-  : never;
+type ObjectValueLiteral<TValue extends BaseValue> =
+  TValue extends BaseObjectValue
+    ? Readonly<{ [Key in keyof TValue]: TValue[Key] }>
+    : never;
 
-type ValueLiteral<Value extends BaseValue> = Value extends BaseArrayValue
-  ? ArrayValueLiteral<Value>
-  : Value extends BaseObjectValue
-    ? ObjectValueLiteral<Value>
+type ValueLiteral<TValue extends BaseValue> = TValue extends BaseArrayValue
+  ? ArrayValueLiteral<TValue>
+  : TValue extends BaseObjectValue
+    ? ObjectValueLiteral<TValue>
     : never;
 
 function isArrayValue(value: BaseValue): value is BaseArrayValue {
@@ -29,24 +30,24 @@ function isObjectValue(value: BaseValue): value is BaseObjectValue {
   return value === Object(value) && !isArrayValue(value);
 }
 
-function normalizeValue<Value extends BaseValue>(
-  value: Value,
-): ValueLiteral<Value> {
+function normalizeValue<TValue extends BaseValue>(
+  value: TValue,
+): ValueLiteral<TValue> {
   if (isArrayValue(value)) {
     return value.reduce(
       (result, value) => ({ ...result, [value]: value }),
-      {} as ValueLiteral<Value>,
+      {} as ValueLiteral<TValue>,
     );
   }
 
   if (isObjectValue(value)) {
-    return value as ValueLiteral<Value>;
+    return value as ValueLiteral<TValue>;
   }
 
   throw new Error('Invalid value');
 }
 
-export function defineConstant<Value extends BaseValue>(value: Value) {
+export function defineConstant<TValue extends BaseValue>(value: TValue) {
   const object = normalizeValue(value);
   type ValueObject = typeof object;
 
