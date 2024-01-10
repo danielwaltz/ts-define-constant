@@ -1,3 +1,16 @@
+### [1.2.3](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.2...v1.2.3) (2024-01-10)
+
+
+### Styles
+
+* consistently use `T` prefix for generics ([c426538](https://github.com/danielwaltz/ts-define-constant/commit/c42653885161f4244b822a39a4ab1dfac0790bf0))
+
+
+### Miscellaneous Chores
+
+* **deps:** update deps ([883b368](https://github.com/danielwaltz/ts-define-constant/commit/883b368bd195c4454a7ff58187e7ca1df83e7a16))
+* migrate to unbuild ([b785d4d](https://github.com/danielwaltz/ts-define-constant/commit/b785d4df29f2de2231af03f6f321652e4fd4768a))
+
 ### [1.2.2](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.1...v1.2.2) (2023-12-02)
 
 
