@@ -5,11 +5,10 @@ type BaseArrayValue = ReadonlyArray<PropertyKey>;
 type BaseObjectValue = Readonly<Record<PropertyKey, PropertyKey>>;
 type BaseValue = BaseArrayValue | BaseObjectValue;
 
-type ArrayValueLiteral<TValue extends BaseValue> = TValue extends ReadonlyArray<
-  infer ArrayValue extends PropertyKey
->
-  ? Readonly<{ [Key in ArrayValue]: Key }>
-  : never;
+type ArrayValueLiteral<TValue extends BaseValue> =
+  TValue extends ReadonlyArray<infer ArrayValue extends PropertyKey>
+    ? Readonly<{ [Key in ArrayValue]: Key }>
+    : never;
 
 type ObjectValueLiteral<TValue extends BaseValue> =
   TValue extends BaseObjectValue
