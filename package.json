@@ -1,6 +1,6 @@
 {
   "name": "ts-define-constant",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Type safe utility for defining static constants with automatic type narrowing and additional helper functions",
   "license": "MIT",
   "author": "Daniel Waltz",

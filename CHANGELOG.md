@@ -1,3 +1,12 @@
+### [1.2.4](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.3...v1.2.4) (2024-06-01)
+
+
+### Miscellaneous Chores
+
+* **deps:** update deps ([be7d4ae](https://github.com/danielwaltz/ts-define-constant/commit/be7d4ae58f2fd659a65a5c7f1000d0a1f34b95b6))
+* formatting ([627c055](https://github.com/danielwaltz/ts-define-constant/commit/627c055a358b389c54f1a2c3be018812971d3386))
+* update node to `20.12.1` ([2367bd0](https://github.com/danielwaltz/ts-define-constant/commit/2367bd0b901d408805d7e4987383b3e3ba42d743))
+
 ### [1.2.3](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.2...v1.2.3) (2024-01-10)
 
 
