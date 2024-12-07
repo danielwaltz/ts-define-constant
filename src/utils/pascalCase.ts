@@ -3,9 +3,9 @@ export function pascalCase(str: string) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
   return str
-    .replace(
+    .replaceAll(
       /([\p{L}\d])([\p{L}\d]*)/giu,
       (_g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase(),
     )
-    .replace(/[^\p{L}\d]/giu, '');
+    .replaceAll(/[^\p{L}\d]/giu, "");
 }

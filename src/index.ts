@@ -1,5 +1,5 @@
-import { pascalCase } from './utils/pascalCase';
-import type { PascalCase } from 'type-fest';
+import { pascalCase } from "./utils/pascalCase";
+import type { PascalCase } from "type-fest";
 
 type BaseArrayValue = ReadonlyArray<PropertyKey>;
 type BaseObjectValue = Readonly<Record<PropertyKey, PropertyKey>>;
@@ -43,7 +43,7 @@ function normalizeValue<TValue extends BaseValue>(
     return value as ValueLiteral<TValue>;
   }
 
-  throw new Error('Invalid value');
+  throw new Error("Invalid value");
 }
 
 export function defineConstant<TValue extends BaseValue>(value: TValue) {
@@ -83,11 +83,11 @@ export function defineConstant<TValue extends BaseValue>(value: TValue) {
       return object[key];
     },
     isKey(key: unknown): key is ValueKey {
-      if (typeof key !== 'string') return false;
+      if (typeof key !== "string") return false;
       return keys.includes(key);
     },
     isValue(value: unknown): value is ValueItem {
-      if (typeof value !== 'string') return false;
+      if (typeof value !== "string") return false;
       return values.includes(value as ValueItem);
     },
     ...narrowerFunctions,
