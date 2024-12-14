@@ -75,20 +75,18 @@ export function defineConstant<TValue extends BaseValue>(value: TValue) {
     keys: Object.freeze(keys),
     values: Object.freeze(values),
     getKey<TValue extends ValueItem>(value: TValue) {
-      // TODO: TypeScript should be able to infer the key literal.
-      //       Revisit this in future TypeScript versions.
-      return keys.find((key) => object[key] === value) as ValueKey;
+      return keys.find((key) => object[key] === value)!;
     },
     getValue<TKey extends ValueKey>(key: TKey) {
       return object[key];
     },
     isKey(key: unknown): key is ValueKey {
-      if (typeof key !== "string") return false;
+      // @ts-expect-error allow unknown
       return keys.includes(key);
     },
     isValue(value: unknown): value is ValueItem {
-      if (typeof value !== "string") return false;
-      return values.includes(value as ValueItem);
+      // @ts-expect-error allow unknown
+      return values.includes(value);
     },
     ...narrowerFunctions,
   });
