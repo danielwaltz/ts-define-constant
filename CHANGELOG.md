@@ -1,3 +1,22 @@
+## [1.2.5](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.4...v1.2.5) (2024-12-14)
+
+### Bug Fixes
+
+* support symbol and number in key and value checkers ([2276b9a](https://github.com/danielwaltz/ts-define-constant/commit/2276b9ab3e3a74875663d70febaca64e793dad3b))
+
+### Miscellaneous Chores
+
+* format ([b2a558b](https://github.com/danielwaltz/ts-define-constant/commit/b2a558ba6a7d74b34393de17fc191a71e3da21dd))
+* migrate to flat config and fix issues ([acb8331](https://github.com/danielwaltz/ts-define-constant/commit/acb833173fe1a1bc81064685148ccf1dc9ffe0f6))
+* update deps ([41c00ab](https://github.com/danielwaltz/ts-define-constant/commit/41c00ab420201379ef7deb1dff081e13d10efee5))
+* update dev deps ([c5ae77f](https://github.com/danielwaltz/ts-define-constant/commit/c5ae77fdae582df2be293d4012dbce9fc3c106fd))
+* update node to `v22.11.0` lts ([41c189a](https://github.com/danielwaltz/ts-define-constant/commit/41c189ae1cb1b9b13c3e68b45e83f3fa73730a1f))
+* use `.node-version` file ([938db2b](https://github.com/danielwaltz/ts-define-constant/commit/938db2b2646a9e1b6f1bdebbeef69d3b914c2a4d))
+
+### Continuous Integration
+
+* update github action versions ([63de08a](https://github.com/danielwaltz/ts-define-constant/commit/63de08a9cea43de3a524f44261174bf7fc968dc0))
+
 ### [1.2.4](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.3...v1.2.4) (2024-06-01)
 
 
