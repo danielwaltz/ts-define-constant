@@ -31,7 +31,7 @@
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub",
-    "lint": "eslint . --cache --cache-location ./node_modules/.cache/.eslintcache --max-warnings 0",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --max-warnings 0",
     "type-check": "tsc --noEmit",
     "test:unit": "vitest",
     "test:type-check": "vitest --typecheck.only",
