@@ -1,10 +1,10 @@
-# TS Define Constant
+# TS Define Constant [![npm](https://img.shields.io/npm/v/ts-define-constant.svg)](https://npmjs.com/package/ts-define-constant)
 
-Type safe utility for defining static constants with automatic type narrowing and additional helper functions.
+Type safe utility for defining static constants with automatic type narrowing and additional helper functions. Zero dependencies.
 
 ## Install
 
-```bash
+```shell
 # npm
 npm i ts-define-constant
 
