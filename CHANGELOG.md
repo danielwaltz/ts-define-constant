@@ -1,3 +1,20 @@
+## [1.3.0](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.5...v1.3.0) (2025-01-25)
+
+### Features
+
+* make `as const` assertions optional ([63c015a](https://github.com/danielwaltz/ts-define-constant/commit/63c015a07f1fb0a20f13bbc3f3ef4d01c6583308))
+
+### Documentation
+
+* add badge and zero dep note to readme ([7e5aa33](https://github.com/danielwaltz/ts-define-constant/commit/7e5aa33da3d35e6ec4105082d9b549b1ba644442))
+* remove notice about supporting typescript enums ([2124c37](https://github.com/danielwaltz/ts-define-constant/commit/2124c3749402727a540cc2fd81da41bba6da0a2f))
+
+### Miscellaneous Chores
+
+* update deps ([a7ec9db](https://github.com/danielwaltz/ts-define-constant/commit/a7ec9db9ef246875a90c8a4e7fab6cea73eb7c1e))
+* update dev deps ([29933bb](https://github.com/danielwaltz/ts-define-constant/commit/29933bb1e9de3ff63e54c0b713c41a9532e768f4))
+* use typescript for eslint config file ([c7e0a09](https://github.com/danielwaltz/ts-define-constant/commit/c7e0a09e70fdb26f4440fa29879114e9cc70fd82))
+
 ## [1.2.5](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.4...v1.2.5) (2024-12-14)
 
 ### Bug Fixes
