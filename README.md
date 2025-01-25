@@ -19,7 +19,7 @@ pnpm i ts-define-constant
 
 Import and define your constants using the provided `defineConstant` function.
 
-Supports passing in a plain object or an array of strings as the first argument. Planning support for TypeScript enums in the future.
+Supports passing in a plain object or an array of strings as the first argument.
 
 ```ts
 import { defineConstant } from 'ts-define-constant';
