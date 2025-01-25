@@ -21,8 +21,6 @@ Import and define your constants using the provided `defineConstant` function.
 
 Supports passing in a plain object or an array of strings as the first argument. Planning support for TypeScript enums in the future.
 
-> :warning: The `defineConstant` function requires a type assertion on the passed in value using `as const` to work properly!
-
 ```ts
 import { defineConstant } from 'ts-define-constant';
 
@@ -45,7 +43,7 @@ const {
   isUser,
   /* Function that returns true if the given value is equal to the ADMIN constant */
   isAdmin,
-} = defineConstant({ USER: 'USER', ADMIN: 'ADMIN' } as const);
+} = defineConstant({ USER: 'USER', ADMIN: 'ADMIN' });
 ```
 
 An example of what this looks like when multiple constants are defined and exported from a shared `constants.ts` file:
@@ -64,7 +62,7 @@ export const {
   isValue: isUserRoleValue,
   isUser,
   isAdmin,
-} = defineConstant({ USER: 'USER', ADMIN: 'ADMIN' } as const);
+} = defineConstant({ USER: 'USER', ADMIN: 'ADMIN' });
 
 export const {
   object: SORT_ORDERS,
@@ -76,5 +74,5 @@ export const {
   isValue: isSortOrderValue,
   isAsc,
   isDesc,
-} = defineConstant({ ASC: 'ASC', DESC: 'DESC' } as const);
+} = defineConstant({ ASC: 'ASC', DESC: 'DESC' });
 ```

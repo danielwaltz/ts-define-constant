@@ -2,7 +2,7 @@ import { describe, expectTypeOf, it } from "vitest";
 import { defineConstant } from "./index";
 
 describe("defineConstant", () => {
-  it("properly types constant output", () => {
+  it("properly types constant object output", () => {
     const { object, keys, values } = defineConstant({
       FOO_KEY: "FOO_VALUE",
       BAR_KEY: "BAR_VALUE",
@@ -17,6 +17,43 @@ describe("defineConstant", () => {
     expectTypeOf(values).toEqualTypeOf<
       ReadonlyArray<"FOO_VALUE" | "BAR_VALUE">
     >();
+  });
+
+  it("properly types non-constant object output", () => {
+    const { object, keys, values } = defineConstant({
+      FOO_KEY: "FOO_VALUE",
+      BAR_KEY: "BAR_VALUE",
+    });
+
+    expectTypeOf(object).toEqualTypeOf<
+      Readonly<{ FOO_KEY: "FOO_VALUE"; BAR_KEY: "BAR_VALUE" }>
+    >();
+
+    expectTypeOf(keys).toEqualTypeOf<ReadonlyArray<"FOO_KEY" | "BAR_KEY">>();
+
+    expectTypeOf(values).toEqualTypeOf<
+      ReadonlyArray<"FOO_VALUE" | "BAR_VALUE">
+    >();
+  });
+
+  it("properly types constant array output", () => {
+    const { object, keys, values } = defineConstant(["FOO", "BAR"] as const);
+
+    expectTypeOf(object).toEqualTypeOf<Readonly<{ FOO: "FOO"; BAR: "BAR" }>>();
+
+    expectTypeOf(keys).toEqualTypeOf<ReadonlyArray<"FOO" | "BAR">>();
+
+    expectTypeOf(values).toEqualTypeOf<ReadonlyArray<"FOO" | "BAR">>();
+  });
+
+  it("properly types non-constant array output", () => {
+    const { object, keys, values } = defineConstant(["FOO", "BAR"]);
+
+    expectTypeOf(object).toEqualTypeOf<Readonly<{ FOO: "FOO"; BAR: "BAR" }>>();
+
+    expectTypeOf(keys).toEqualTypeOf<ReadonlyArray<"FOO" | "BAR">>();
+
+    expectTypeOf(values).toEqualTypeOf<ReadonlyArray<"FOO" | "BAR">>();
   });
 
   it("accurately narrows the type of keys", () => {

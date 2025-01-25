@@ -29,7 +29,7 @@ function isObjectValue(value: BaseValue): value is BaseObjectValue {
   return value === Object(value) && !isArrayValue(value);
 }
 
-function normalizeValue<TValue extends BaseValue>(
+function normalizeValue<const TValue extends BaseValue>(
   value: TValue,
 ): ValueLiteral<TValue> {
   if (isArrayValue(value)) {
@@ -46,7 +46,7 @@ function normalizeValue<TValue extends BaseValue>(
   throw new Error("Invalid value");
 }
 
-export function defineConstant<TValue extends BaseValue>(value: TValue) {
+export function defineConstant<const TValue extends BaseValue>(value: TValue) {
   const object = normalizeValue(value);
   type ValueObject = typeof object;
 
@@ -74,10 +74,10 @@ export function defineConstant<TValue extends BaseValue>(value: TValue) {
     object,
     keys: Object.freeze(keys),
     values: Object.freeze(values),
-    getKey<TValue extends ValueItem>(value: TValue) {
+    getKey<const TValue extends ValueItem>(value: TValue) {
       return keys.find((key) => object[key] === value)!;
     },
-    getValue<TKey extends ValueKey>(key: TKey) {
+    getValue<const TKey extends ValueKey>(key: TKey) {
       return object[key];
     },
     isKey(key: unknown): key is ValueKey {
