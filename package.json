@@ -32,10 +32,11 @@
     "build": "unbuild",
     "stub": "unbuild --stub",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --max-warnings 0",
+    "publint": "npx -y publint@latest && npx -y @arethetypeswrong/cli@latest --pack",
     "type-check": "tsc --noEmit",
     "test:unit": "vitest",
     "test:type-check": "vitest --typecheck.only",
-    "test": "run-p test:unit test:type-check",
+    "test": "run-s lint type-check build test:unit test:type-check publint",
     "release": "standard-version",
     "semantic-release": "semantic-release",
     "prepack": "npm run build"
