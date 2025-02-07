@@ -1,6 +1,6 @@
 {
   "name": "ts-define-constant",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Type safe utility for defining static constants with automatic type narrowing and additional helper functions",
   "type": "module",
   "keywords": [

@@ -1,3 +1,18 @@
+## [2.0.0](https://github.com/danielwaltz/ts-define-constant/compare/v1.3.0...v2.0.0) (2025-02-07)
+
+### ⚠ BREAKING CHANGES
+
+* publish module as esm only
+
+### Features
+
+* publish module as esm only ([1c02901](https://github.com/danielwaltz/ts-define-constant/commit/1c02901fe55b1eb9d45f6b5e787d4eb83818bc2f))
+
+### Miscellaneous Chores
+
+* improve test script ([df8a14e](https://github.com/danielwaltz/ts-define-constant/commit/df8a14e5e5a7f330ffd50c5e42fe136150e49a51))
+* update deps ([d4ccc1a](https://github.com/danielwaltz/ts-define-constant/commit/d4ccc1a134ad1855bd6d3e4a354317ee62955147))
+
 ## [1.3.0](https://github.com/danielwaltz/ts-define-constant/compare/v1.2.5...v1.3.0) (2025-01-25)
 
 ### Features
