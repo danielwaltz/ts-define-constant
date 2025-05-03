@@ -35,8 +35,9 @@
     "publint": "npx -y publint@latest && npx -y @arethetypeswrong/cli@latest --pack --profile esm-only",
     "type-check": "tsc --noEmit",
     "test:unit": "vitest",
-    "test:type-check": "vitest --typecheck.only",
-    "test": "run-s lint type-check build test:unit test:type-check publint",
+    "test:unit:run": "vitest run",
+    "test:type-check:run": "vitest run --typecheck.only",
+    "test": "run-s lint type-check build test:unit:run test:type-check:run publint",
     "release": "standard-version",
     "semantic-release": "semantic-release",
     "prepack": "npm run build"
