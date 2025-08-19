@@ -1,5 +1,5 @@
-import { defineBuildConfig } from "unbuild";
+import { defineBuildConfig } from "obuild/config";
 
 export default defineBuildConfig({
-  externals: ["type-fest"],
+  entries: ["./src/index"],
 });

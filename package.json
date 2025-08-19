@@ -34,8 +34,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "unbuild",
-    "stub": "unbuild --stub",
+    "build": "obuild",
+    "stub": "obuild --stub",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --max-warnings 0",
     "publint": "npx -y publint@latest && npx -y @arethetypeswrong/cli@latest --pack --profile esm-only",
     "type-check": "tsc --noEmit",
@@ -58,12 +58,12 @@
     "@types/node": "~22.17.2",
     "eslint": "^9.33.0",
     "npm-run-all2": "^8.0.4",
+    "obuild": "^0.2.1",
     "prettier": "^3.6.2",
     "semantic-release": "^24.2.7",
     "standard-version": "^9.5.0",
     "type-fest": "^4.41.0",
     "typescript": "^5.9.2",
-    "unbuild": "^3.6.1",
     "vitest": "^3.2.4"
   },
   "overrides": {
