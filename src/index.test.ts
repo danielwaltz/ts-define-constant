@@ -47,7 +47,7 @@ describe("defineConstant", () => {
 
     expect(ARRAY_VALUE).toStrictEqual({
       1: 1,
-      ["2"]: "2",
+      "2": "2",
       [unique]: unique,
       BAR: "BAR",
     });
