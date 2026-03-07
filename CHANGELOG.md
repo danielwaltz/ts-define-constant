@@ -1,3 +1,30 @@
+## [2.0.1](https://github.com/danielwaltz/ts-define-constant/compare/v2.0.0...v2.0.1) (2026-03-07)
+
+### Performance Improvements
+
+* move regex to module scope ([89f2dd5](https://github.com/danielwaltz/ts-define-constant/commit/89f2dd5fd13268c89974e97403d43384a0f569ab))
+
+### Miscellaneous Chores
+
+* improve test script ([0666c71](https://github.com/danielwaltz/ts-define-constant/commit/0666c716fd4d3d0bbb2cb6d2dc4c91367ff386cb))
+* migrate from obuild to tsdown ([492766b](https://github.com/danielwaltz/ts-define-constant/commit/492766b44de43d365dcb30f54255dbba49318e25))
+* refresh editorconfig ([4506c7b](https://github.com/danielwaltz/ts-define-constant/commit/4506c7be4feb01100546ad65ddacffc5c5689526))
+* switch to obuild ([9963e04](https://github.com/danielwaltz/ts-define-constant/commit/9963e043f83ee77412dc630302dd93643099a4a5))
+* update deps ([4f69ea8](https://github.com/danielwaltz/ts-define-constant/commit/4f69ea8dd620f284b1933312cd572bc23ec7a743))
+* update deps ([99a8542](https://github.com/danielwaltz/ts-define-constant/commit/99a85420ecd65cf7e17f0a140bf56c315246d8bf))
+* update deps ([8577b3f](https://github.com/danielwaltz/ts-define-constant/commit/8577b3f3ce071ca8151f17c5d9cb39ec630c72ce))
+* update dev deps ([20f6127](https://github.com/danielwaltz/ts-define-constant/commit/20f6127ed9241b86e82eade3a90cefc71775c4a7))
+* update dev deps ([6b7b849](https://github.com/danielwaltz/ts-define-constant/commit/6b7b8497a92c75fb44fcb9500170c6763c53d3ee))
+* update dev deps ([aaa6aaa](https://github.com/danielwaltz/ts-define-constant/commit/aaa6aaa069376c3b4674bd58ef38e6aba0a6c68c))
+* update node to `v22.17.0` ([1de7c1d](https://github.com/danielwaltz/ts-define-constant/commit/1de7c1d0051dd3948444414b3984c1068cc1827e))
+* update node to `v24.13.0` ([09963b1](https://github.com/danielwaltz/ts-define-constant/commit/09963b128fa298a8f940a6ccd00a4090b5f49df9))
+* update test scripts ([fc82f55](https://github.com/danielwaltz/ts-define-constant/commit/fc82f55a7261749c940010157edc3979836fa13c))
+
+### Continuous Integration
+
+* bump action versions ([929750c](https://github.com/danielwaltz/ts-define-constant/commit/929750c7d2dce3801642b01a65ee941b6a3e68fd))
+* prepare for future trusted publish support ([d8ebefc](https://github.com/danielwaltz/ts-define-constant/commit/d8ebefc5b20e6b3c947b6a4246ec1ccd4c06483a))
+
 ## [2.0.0](https://github.com/danielwaltz/ts-define-constant/compare/v1.3.0...v2.0.0) (2025-02-07)
 
 ### ⚠ BREAKING CHANGES
