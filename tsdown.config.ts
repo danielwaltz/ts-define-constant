@@ -4,4 +4,7 @@ export default defineConfig({
   entry: ["src/index.ts"],
   exports: true,
   dts: true,
+  deps: {
+    onlyAllowBundle: false,
+  },
 });
