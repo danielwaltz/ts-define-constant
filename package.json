@@ -17,14 +17,9 @@
     "type-narrowing"
   ],
   "exports": {
-    ".": {
-      "types": "./dist/index.d.mts",
-      "default": "./dist/index.mjs"
-    }
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
   "files": [
     "dist"
   ],
@@ -34,18 +29,23 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "obuild",
-    "stub": "obuild --stub",
-    "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --max-warnings 0",
-    "publint": "npx -y publint@latest && npx -y @arethetypeswrong/cli@latest --pack --profile esm-only",
-    "type-check": "tsc --noEmit",
-    "test:unit": "vitest",
-    "test:unit:run": "vitest run",
-    "test:type-check:run": "vitest run --typecheck.only",
-    "test": "run-s lint type-check build test:unit:run test:type-check:run publint",
+    "build": "tsdown",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "prepack": "npm run build",
     "release": "standard-version",
     "semantic-release": "semantic-release",
-    "prepack": "npm run build"
+    "test": "npm run prepack && npm run lint && npm run type-check && npm run test:unit && npm run test:unit:typecheck && npm run test:publish",
+    "test:attw": "npx -y @arethetypeswrong/cli@latest --pack --profile esm-only",
+    "test:publint": "npx -y publint@latest",
+    "test:publish": "npm run test:attw && npm run test:publint",
+    "test:unit": "vitest",
+    "test:unit:run": "vitest run",
+    "test:unit:typecheck": "vitest run --typecheck.only",
+    "type-check": "tsc --noEmit"
+  },
+  "inlinedDependencies": {
+    "type-fest": "5.4.4"
   },
   "devDependencies": {
     "@danielwaltz/eslint-config": "^3.3.1",
@@ -57,11 +57,11 @@
     "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/node": "~24.10.15",
     "eslint": "^10.0.3",
-    "npm-run-all2": "^8.0.4",
-    "obuild": "^0.4.31",
+    "jiti": "^2.6.1",
     "prettier": "^3.8.1",
     "semantic-release": "^25.0.3",
     "standard-version": "^9.5.0",
+    "tsdown": "^0.21.0",
     "type-fest": "^5.4.4",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
