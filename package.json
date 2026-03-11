@@ -49,7 +49,7 @@
     "type-fest": "5.4.4"
   },
   "devDependencies": {
-    "@danielwaltz/eslint-config": "^3.3.1",
+    "@danielwaltz/eslint-config": "^3.3.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
@@ -62,7 +62,7 @@
     "prettier": "^3.8.1",
     "semantic-release": "^25.0.3",
     "standard-version": "^9.5.0",
-    "tsdown": "^0.21.0",
+    "tsdown": "^0.21.2",
     "type-fest": "^5.4.4",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
