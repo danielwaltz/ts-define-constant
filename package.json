@@ -10,11 +10,11 @@
     "url": "git+https://github.com/danielwaltz/ts-define-constant.git"
   },
   "keywords": [
-    "utility",
-    "typescript",
     "constant",
     "narrowing",
-    "type-narrowing"
+    "type-narrowing",
+    "typescript",
+    "utility"
   ],
   "exports": {
     ".": "./dist/index.mjs",
@@ -69,5 +69,17 @@
   },
   "overrides": {
     "conventional-changelog-conventionalcommits": ">=9.3.1"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "24.18.0"
+    }
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
   }
 }

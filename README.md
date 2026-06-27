@@ -22,7 +22,7 @@ Import and define your constants using the provided `defineConstant` function.
 Supports passing in a plain object or an array of strings as the first argument.
 
 ```ts
-import { defineConstant } from 'ts-define-constant';
+import { defineConstant } from "ts-define-constant";
 
 const {
   /* Plain object containing the constants */
@@ -43,14 +43,14 @@ const {
   isUser,
   /* Function that returns true if the given value is equal to the ADMIN constant */
   isAdmin,
-} = defineConstant({ USER: 'USER', ADMIN: 'ADMIN' });
+} = defineConstant({ USER: "USER", ADMIN: "ADMIN" });
 ```
 
 An example of what this looks like when multiple constants are defined and exported from a shared `constants.ts` file:
 
 ```ts
 // constants.ts
-import { defineConstant } from 'ts-define-constant';
+import { defineConstant } from "ts-define-constant";
 
 export const {
   object: USER_ROLES,
@@ -62,7 +62,7 @@ export const {
   isValue: isUserRoleValue,
   isUser,
   isAdmin,
-} = defineConstant({ USER: 'USER', ADMIN: 'ADMIN' });
+} = defineConstant({ USER: "USER", ADMIN: "ADMIN" });
 
 export const {
   object: SORT_ORDERS,
@@ -74,5 +74,5 @@ export const {
   isValue: isSortOrderValue,
   isAsc,
   isDesc,
-} = defineConstant({ ASC: 'ASC', DESC: 'DESC' });
+} = defineConstant({ ASC: "ASC", DESC: "DESC" });
 ```
