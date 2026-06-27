@@ -29,6 +29,5 @@
   "js/ts.preferences.importModuleSpecifier": "non-relative",
   "js/ts.tsdk.path": "node_modules/typescript/lib",
   "prettier.enable": true,
-  "prettier.prettierPath": "node_modules/prettier",
-  "unocss.root": ["./playground"]
+  "prettier.prettierPath": "node_modules/prettier"
 }
